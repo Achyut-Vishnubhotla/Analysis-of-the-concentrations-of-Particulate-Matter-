@@ -1,0 +1,151 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+
+<head>
+  <title>AIR POLLUTION AWARENESS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      color: #333;
+      font-family: 'Times New Roman', Times, serif;
+      background-image: url("https://png.pngtree.com/background/20231030/original/pngtree-3d-renderings-of-eco-friendly-concepts-picture-image_5799732.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+    .jumbotron {
+      background-color: rgba(255, 255, 255, 0.85); 
+      padding: 40px 0;
+      border-radius: 0;
+    }
+    h1 {
+      color: rgb(34, 139, 34);
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+    .text-center img {
+      width: 250px;
+      height: 250px;
+      margin: 0 15px;
+      border-radius: 10%;
+      border: 3px solid rgb(34, 139, 34);
+    }
+    h3 {
+      color: rgb(178, 34, 34);
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    p {
+      color: rgb(0, 102, 204);
+      font-size: 1.1em;
+      letter-spacing: 0.5px;
+      line-height: 1.6;
+    }
+    .card {
+      height: 350px;
+      margin-bottom: 20px;
+      transition: transform 0.2s;
+      background-color: rgba(255, 255, 255, 0.9); 
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>AIR POLLUTION AWARENESS</h1>
+</div>
+
+<div class="text-center">
+  <img src="https://png.pngtree.com/png-vector/20240129/ourlarge/pngtree-3d-illustration-of-air-pollution-png-image_11561050.png" alt="Air Pollution Image 1">
+  <img src="https://png.pngtree.com/png-vector/20240129/ourlarge/pngtree-3d-illustration-of-air-pollution-png-image_11561049.png" alt="Air Pollution Image 2">
+  <img src="https://static.vecteezy.com/system/resources/previews/030/568/227/non_2x/air-pollution-with-ai-generated-free-png.png" alt="Air Pollution Image 3">
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card shadow" style="border: none; background-color: #f0f8ff; padding: 20px; margin-bottom: 30px;">
+        <div class="card-body" style="text-align: justify;">
+          <h3 style="font-family: 'Times New Roman', Times, serif; color: #4b3832; text-align: center; border-bottom: 1px solid #4b3832; padding-bottom: 10px;">What is Air Pollution?</h3>
+          <p style="font-family: 'Times New Roman', Times, serif; font-size: 1.1em; color: #333; line-height: 1.7;">
+            Air pollution refers to harmful substances in the air, posing health risks and environmental damage.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow" style="border: none; background-color: #f0f8ff; padding: 20px; margin-bottom: 30px;">
+        <div class="card-body" style="text-align: justify;">
+          <h3 style="font-family: 'Times New Roman', Times, serif; color: #4b3832; text-align: center; border-bottom: 1px solid #4b3832; padding-bottom: 10px;">Sources of Air Pollution</h3>
+          <p style="font-family: 'Times New Roman', Times, serif; font-size: 1.1em; color: #333; line-height: 1.7;">
+            Pollutants from vehicles, factories, and agriculture are major contributors to poor air quality.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow" style="border: none; background-color: #f0f8ff; padding: 20px; margin-bottom: 30px;">
+        <div class="card-body" style="text-align: justify;">
+          <h3 style="font-family: 'Times New Roman', Times, serif; color: #4b3832; text-align: center; border-bottom: 1px solid #4b3832; padding-bottom: 10px;">Effects of Air Pollution</h3>
+          <p style="font-family: 'Times New Roman', Times, serif; font-size: 1.1em; color: #333; line-height: 1.7;">
+            Long-term exposure to polluted air can cause respiratory issues, heart diseases, and environmental degradation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card shadow" style="border: none; background-color: #f0f8ff; padding: 20px; margin-bottom: 30px;">
+        <div class="card-body" style="text-align: justify;">
+          <h3 style="font-family: 'Times New Roman', Times, serif; color: #4b3832; text-align: center; border-bottom: 1px solid #4b3832; padding-bottom: 10px;">How to Reduce Pollution</h3>
+          <p style="font-family: 'Times New Roman', Times, serif; font-size: 1.1em; color: #333; line-height: 1.7;">
+            Limiting the use of fossil fuels, promoting renewable energy, and planting trees are key solutions to combat air pollution.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow" style="border: none; background-color: #f0f8ff; padding: 20px; margin-bottom: 30px;">
+        <div class="card-body" style="text-align: justify;">
+          <h3 style="font-family: 'Times New Roman', Times, serif; color: #4b3832; text-align: center; border-bottom: 1px solid #4b3832; padding-bottom: 10px;">Health Impact of Air Pollution</h3>
+          <p style="font-family: 'Times New Roman', Times, serif; font-size: 1.1em; color: #333; line-height: 1.7;">
+            Polluted air leads to respiratory problems, asthma, and in severe cases, can increase mortality rates.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow" style="border: none; background-color: #f0f8ff; padding: 20px; margin-bottom: 30px;">
+        <div class="card-body" style="text-align: justify;">
+          <h3 style="font-family: 'Times New Roman', Times, serif; color: #4b3832; text-align: center; border-bottom: 1px solid #4b3832; padding-bottom: 10px;">Role of Technology in Reducing Pollution</h3>
+          <p style="font-family: 'Times New Roman', Times, serif; font-size: 1.1em; color: #333; line-height: 1.7;">
+            Innovations like air quality sensors, electric vehicles, and air purifiers are helping to mitigate pollution effects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+{% endblock %}

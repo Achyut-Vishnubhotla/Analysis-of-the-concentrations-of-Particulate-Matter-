@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height */
+            background-image: url('https://www.activesustainability.com/media/816983/portada-soste-7-paises-aire.jpg'); /* Background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the image */
+            color: #333; /* Dark text color */
+        }
+        .banner {
+            width: 90%; /* Width of the form */
+            max-width: 600px; /* Max width for larger screens */
+            padding: 40px; /* Padding for the banner */
+            background: rgba(255, 255, 255, 0.95); /* Light background for the form */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            transition: transform 0.3s; /* Animation on hover */
+        }
+        .banner:hover {
+            transform: scale(1.02); /* Slightly enlarge on hover */
+        }
+        .content {
+            text-align: center;
+        }
+        .content h1 {
+            font-size: 36px; /* Increased heading size */
+            margin-bottom: 20px;
+            color: #00796b; /* Accent color for heading */
+        }
+        .IN {
+            border: 2px solid #009688; /* Accent border color */
+            height: 45px; /* Height of input fields */
+            width: calc(100% - 20px); /* Full width minus padding */
+            border-radius: 5px;
+            padding: 10px; /* Padding inside the input */
+            margin-bottom: 15px; /* Space between inputs */
+            transition: border-color 0.3s; /* Smooth border color transition */
+        }
+        .IN:focus {
+            border-color: #00796b; /* Darker border on focus */
+            outline: none; /* Remove default outline */
+        }
+        button {
+            width: 100%; /* Full width button */
+            padding: 15px; /* Padding for the button */
+            margin-top: 10px; /* Space above button */
+            border-radius: 5px;
+            font-weight: bold;
+            border: none; /* Removed border */
+            background-color: #009688; /* Solid background color */
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px; /* Increased font size */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+        }
+        button:hover {
+            background-color: #00796b; /* Darker shade on hover */
+            transform: translateY(-2px); /* Lift effect on hover */
+        }
+    </style>
+</head>
+<body>
+    <form action="result">
+        {% csrf_token %}
+        <div class="banner">
+            <div class="content">
+                <h1>AIR QUALITY PREDICTION</h1>
+                <input class="IN" placeholder=" SOi :" type="text" required name="SOi">
+                <input class="IN" placeholder=" Noi :" type="text" required name="Noi">
+                <input class="IN" placeholder=" Rpi :" type="text" required name="Rpi">
+                <input class="IN" placeholder=" SPMi :" type="text" required name="SPMi">
+                <button type="submit">PREDICTION</button>
+            </div>
+        </div>
+    </form>  
+</body>
+</html>

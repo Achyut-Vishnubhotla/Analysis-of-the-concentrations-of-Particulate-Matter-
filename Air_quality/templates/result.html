@@ -1,0 +1,87 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Result</title>
+  <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+      body {
+          background-image: url('https://media.istockphoto.com/id/1333701004/photo/air-quality-index.jpg?s=612x612&w=0&k=20&c=J50qZ2MMJcWql70VRYdAuB4oIh8H5UdfwqAOQvoyyh4=');
+          background-size: cover;
+          background-position: center;
+          color: whitesmoke;
+          font-family: 'Times New Roman', Times, serif;
+      }
+      .center {
+          position: absolute;
+          text-align: center;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(46, 78, 69, 0.8); /* Semi-transparent background */
+          padding: 40px;
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      }
+      h1 {
+          font-size: 40px;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+          color: azure;
+      }
+      p {
+          text-align: justify;
+          color: rgb(191, 186, 204);
+          font-weight: 900;
+      }
+      strong {
+          color: rgb(236, 145, 145);
+      }
+  </style>
+</head>
+
+<body>
+    <div class="center">
+      {% if result == 'Poor' %} 
+        <h1>POOR AIR QUALITY </h1>
+        <p><strong>DESCRIPTION:</strong> <br>Here is a description of poor air quality conditions. The scene depicts a city skyline with visible smog and pollution, indicating unhealthy air conditions.</p>
+        <p><strong>Possible Diseases:</strong> <br>Asthma, Bronchitis, and Respiratory Infections.</p>
+        <p><strong>Scientific Information:</strong><br>
+          - Nitrogen oxides (NOₓ) primarily come from vehicle emissions and industrial processes.<br>
+          - Sulfur oxides (SOₓ) are released from the burning of fossil fuels.<br>
+          <strong>Thresholds:</strong> SO₂ levels should stay below 0.03 ppm (annual mean) to prevent acid rain, and NO₂ concentrations should remain below 0.053 ppm (annual mean) according to air quality standards.
+        </p>
+      {% elif result == 'Good' %}
+        <h1>GOOD AIR QUALITY INDEX</h1>
+        <p><strong>DESCRIPTION:</strong> <br>Here is a description of good air quality conditions. The scene shows a lush green park in a city with clear blue skies, representing healthy air quality.</p>
+        <p><strong>Possible Diseases:</strong> <br>Minimal health risks, no significant diseases associated with good air quality.</p>
+      {% elif result == 'Moderate' %}
+        <h1>MODERATE AIR QUALITY </h1>
+        <p><strong>DESCRIPTION:</strong> <br>Here is a description of moderate air quality conditions. The sky is slightly hazy, suggesting some air pollution, but the environment appears mostly clean.</p>
+        <p><strong>Possible Diseases:</strong> <br>Mild Respiratory Irritation, Asthma (for sensitive groups).</p>
+      {% elif result == 'Unhealthy' %}
+        <h1>UNHEALTHY AIR QUALITY </h1>
+        <p><strong>DESCRIPTION:</strong> <br>Here is a description of unhealthy air quality conditions. The sky is heavily polluted, obscuring the cityscape, with people visible outdoors wearing masks.</p>
+        <p><strong>Possible Diseases:</strong> <br>Lung Inflammation, Aggravated Asthma, and Heart Disease.</p>
+      {% elif result == 'Hazardous' %}
+        <h1>HAZARDOUS AIR QUALITY</h1>
+        <p><strong>DESCRIPTION:</strong> <br>Here is a description of hazardous air quality conditions. The sky is filled with thick, toxic smog, creating dangerous conditions.</p>
+        <p><strong>Possible Diseases:</strong> <br>Lung Cancer, Cardiovascular Diseases, Premature Death.</p>
+      {% else %}
+        <h1>VERY UNHEALTHY AIR QUALITY </h1>
+        <p><strong>DESCRIPTION:</strong> <br>Here is a description of very unhealthy air quality conditions. The sky is thick with pollution, severely reducing visibility.</p>
+        <p><strong>Possible Diseases:</strong> <br>Chronic Bronchitis, Reduced Lung Function, and Respiratory Failure.</p>
+        <p><strong>Scientific Information:</strong><br>
+          - Nitrogen oxides (NOₓ) primarily come from vehicle emissions and industrial processes.<br>
+          - Sulfur oxides (SOₓ) are released from the burning of fossil fuels.<br>
+          <strong>Thresholds:</strong> SO₂ levels should stay below 0.03 ppm (annual mean) to prevent acid rain, and NO₂ concentrations should remain below 0.053 ppm (annual mean) according to air quality standards.
+        </p>
+      {% endif %}
+    </div>
+</body>
+</html>
